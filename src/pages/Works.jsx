@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import LazyLoad from 'react-lazyload';
 import Modal from 'react-modal';
 import SectionTitle from '../components/Shared/SectionTitle';
 import { supabase } from '../services/supabase';
