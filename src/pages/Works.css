@@ -289,6 +289,26 @@
   font-weight: 600;
 }
 
+/* Category badge container - desktop */
+.category-badge-container {
+  padding: 30px 500px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.category-badge {
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .project-details {
   padding: 0 var(--spacing-xl) var(--spacing-lg);
 }
@@ -436,8 +456,22 @@
     margin: 0;
   }
   
-  .video-container + div {
-    display: none !important;
+  /* Category badge - mobile vertical layout */
+  .category-badge-container {
+    padding: var(--spacing-md);
+    background: white;
+    display: block;
+    text-align: center;
+  }
+  
+  .category-badge {
+    position: static;
+    transform: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
   
   .project-details {

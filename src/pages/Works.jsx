@@ -261,23 +261,8 @@ const Works = () => {
                       allowFullScreen
                     ></iframe>
                   </div>
-                  <div style={{ 
-                    padding: '30px 500px',
-                    background: 'white',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    position: 'relative'
-                  }}>
-                    <div style={{ 
-                      fontSize: '20px', 
-                      color: '#000',
-                      fontWeight: '500',
-                      whiteSpace: 'nowrap',
-                      position: 'absolute',
-                      right: '62%',
-                      transform: 'translateX(-50%)'
-                    }}>
+                  <div className="category-badge-container">
+                    <div className="category-badge">
                       {selectedProject.category}
                     </div>
                   </div>
