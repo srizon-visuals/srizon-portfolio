@@ -920,14 +920,123 @@
   }
   
   .hero-subtext {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 1rem;
   }
   
   .feature-card {
     padding: 1.25rem;
   }
   
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
   .featured-item {
     height: 200px;
+  }
+  
+  .portfolio-cta button {
+    padding: 0.9rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Extra small phones (375px and below) */
+@media (max-width: 375px) {
+  .roll-title-container {
+    height: 2rem;
+  }
+  
+  .roll-text {
+    font-size: 1.6rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+  }
+  
+  @keyframes roll {
+    0%, 27% {
+      transform: translateY(0);
+    }
+    33%, 60% {
+      transform: translateY(-2rem);
+    }
+    66%, 93% {
+      transform: translateY(-4rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-subtext {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0.75rem 0 1.5rem;
+    padding: 0 0.75rem;
+  }
+  
+  .portfolio-cta button {
+    padding: 0.8rem 1.75rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .feature-card {
+    padding: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .feature-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .featured-item {
+    height: 180px;
+  }
+  
+  .featured-overlay h3 {
+    font-size: 1.1rem;
+  }
+  
+  .featured-overlay p {
+    font-size: 0.8rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 1.5rem;
+  }
+  
+  .stat-item p {
+    font-size: 0.75rem;
+  }
+  
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
   }
 }
