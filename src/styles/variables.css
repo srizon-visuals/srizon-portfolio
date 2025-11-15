@@ -1,0 +1,47 @@
+:root {
+  /* Color theme */
+  --dark: #070f18; /* Darker blue-black for background */
+  --white: #ffffff;
+  --white-rgb: 255, 255, 255; /* RGB values for rgba usage */
+  --ash: #d9dbe1; /* Light ash color for menu items */
+  --accent: #ff2d2d; /* Changed to match the red neon color in screenshots */
+  --accent-rgb: 255, 45, 45; /* RGB values for rgba usage */
+  
+  /* Gradient colors */
+  --gradient-dark: #0a0f14;
+  --gradient-mid: #111a20;
+  --gradient-light: #131e28;
+  
+  /* Card gradients */
+  --card-gradient1-start: #1a3542;
+  --card-gradient1-end: #2c5364;
+  --card-gradient2-start: #203a43;
+  --card-gradient2-end: #2c5364;
+  --card-gradient3-start: #0f2027;
+  --card-gradient3-end: #203a43;
+  
+  /* Special element colors */
+  --card-bg: #1a2e39;
+  
+  /* Responsive breakpoints */
+  --mobile: 480px;
+  --tablet: 768px;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+}

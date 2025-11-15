@@ -1,0 +1,43 @@
+.section-title {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title.centered {
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--dark); /* Changed to dark for better visibility on light backgrounds */
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.85;
+  max-width: 600px;
+  color: var(--dark); /* Changed to dark for better visibility on light backgrounds */
+}
+
+.centered .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title-divider {
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+.centered .title-divider {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Add a variant for sections with dark backgrounds */
+.section-title.on-dark h2,
+.section-title.on-dark .section-subtitle {
+  color: var(--white);
+}

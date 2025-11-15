@@ -1,0 +1,356 @@
+.header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 60px);
+  max-width: 1300px;
+  z-index: 1000;
+  padding: 0;
+  transition: all 0.4s ease;
+  background-color: transparent;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.header-inner {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(15, 20, 30, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+              0 0 10px rgba(255, 0, 0, 0.1);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 15px;
+  animation: subtle-glow 6s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-glow {
+  0% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(255, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25),
+                0 0 20px rgba(255, 0, 0, 0.18);
+    border-color: rgba(255, 0, 0, 0.12);
+  }
+}
+
+/* Always ensure text is visible on the home page with dark background */
+.home .header .logo a {
+  color: var(--white);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+.home .header .nav-links a,
+.header.on-dark-bg .nav-links a,
+.header.scrolled .nav-links a {
+  color: var(--ash);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+}
+
+.home .header .hamburger span {
+  background-color: var(--white);
+}
+
+/* Make sure all text transitions are smooth */
+.header .logo a,
+.header .nav-links a,
+.header .hamburger span {
+  transition: all 0.3s ease;
+}
+
+/* Make the logo text visible in all states */
+.header .logo a {
+  color: var(--white);
+  opacity: 1;
+}
+
+.header.scrolled {
+  top: 15px;
+}
+
+.header.scrolled .header-inner {
+  background-color: rgba(10, 15, 25, 0.75);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
+              0 0 15px rgba(255, 0, 0, 0.15);
+  border-color: rgba(255, 0, 0, 0.15);
+}
+
+/* Color handled by combined selector above */
+
+/* Header styling when on dark background pages */
+.header.on-dark-bg {
+  background-color: transparent;
+}
+
+.header.on-dark-bg .logo a,
+.header.on-dark-bg .hamburger span {
+  color: var(--white);
+}
+
+/* Color handled by combined selector above */
+
+.header.on-dark-bg .hamburger span {
+  background-color: var(--white);
+}
+
+.header.on-dark-bg .nav-links a::after {
+  background-color: var(--accent);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-md);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  opacity: 0.95;
+}
+
+.logo a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Enhanced logo visibility on dark backgrounds */
+.header.on-dark-bg .logo a,
+.header.scrolled .logo a {
+  color: var(--white);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.main-nav {
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-xl);
+}
+
+.nav-links a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 2px;
+  border-radius: 0;
+  opacity: 0.95;
+  letter-spacing: 0.02em;
+}
+
+/* Color handled by combined selector above */
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+  transition: width 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
+  opacity: 0.8;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 20px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+  background-color: transparent;
+  opacity: 1;
+}
+
+/* Hover/active state for links when on dark background */
+.header.on-dark-bg .nav-links a:hover,
+.header.on-dark-bg .nav-links a.active,
+.header.scrolled .nav-links a:hover,
+.header.scrolled .nav-links a.active {
+  color: var(--accent);
+  opacity: 1;
+  background-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.hamburger:hover {
+  opacity: 0.8;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.open span:nth-child(1) {
+  position: absolute;
+  top: 9px;
+  transform: rotate(45deg);
+  background-color: var(--accent);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  position: absolute;
+  top: 9px;
+  transform: rotate(-45deg);
+  background-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .header {
+    width: calc(100% - 30px);
+    top: 15px;
+    overflow: visible;
+  }
+  
+  .header-inner {
+    overflow: visible;
+  }
+  
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+    transform: none;
+    width: 100%;
+    background: rgba(15, 20, 30, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform-origin: top right;
+  }
+  
+  .main-nav.open {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+    padding: 8px 0;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 14px 20px;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: right;
+    font-size: 0.95rem;
+    opacity: 1;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: rgba(255, 45, 45, 0.1);
+    color: var(--accent);
+  }
+  
+  .nav-links a::after {
+    display: none;
+  }
+  
+  /* Override all other styles for mobile menu links */
+  .header .main-nav .nav-links a,
+  .header.on-dark-bg .main-nav .nav-links a,
+  .header.scrolled .main-nav .nav-links a {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .header .main-nav .nav-links a:hover,
+  .header.on-dark-bg .main-nav .nav-links a:hover,
+  .header.scrolled .main-nav .nav-links a:hover,
+  .header .main-nav .nav-links a.active,
+  .header.on-dark-bg .main-nav .nav-links a.active,
+  .header.scrolled .main-nav .nav-links a.active {
+    color: var(--accent);
+    background-color: rgba(255, 45, 45, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    width: calc(100% - 20px);
+  }
+  
+  .logo a {
+    font-size: 1.3rem;
+  }
+  
+  .main-nav {
+    width: calc(100% - 30px);
+  }
+}
