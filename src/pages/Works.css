@@ -411,19 +411,7 @@
   }
   
   .close-modal {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    display: none;
   }
 }
 

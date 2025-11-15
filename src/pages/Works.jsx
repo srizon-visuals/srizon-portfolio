@@ -238,6 +238,7 @@ const Works = () => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
+        shouldCloseOnOverlayClick={true}
         className="project-modal"
         overlayClassName="modal-overlay"
         contentLabel="Project Details"
