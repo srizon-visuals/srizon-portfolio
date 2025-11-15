@@ -132,12 +132,16 @@ const Experience = () => {
                   
                   <motion.div 
                     className={`client-details ${activeClient === client.id ? 'visible' : ''}`}
-                    initial={{ opacity: 0, height: 0 }}
+                    initial={{ opacity: 0, maxHeight: 0 }}
                     animate={{ 
                       opacity: activeClient === client.id ? 1 : 0,
-                      height: activeClient === client.id ? 'auto' : 0
+                      maxHeight: activeClient === client.id ? 1000 : 0
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ 
+                      duration: 0.5,
+                      ease: "easeInOut",
+                      opacity: { duration: 0.3, delay: activeClient === client.id ? 0.2 : 0 }
+                    }}
                   >
                     <h3>{client.name}</h3>
                     <p className="client-industry">{client.industry}</p>
