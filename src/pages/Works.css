@@ -301,12 +301,13 @@
 
 .category-badge {
   font-size: 20px;
-  color: #000;
+  color: #ffffff;
   font-weight: 500;
   white-space: nowrap;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
 }
 
 .project-details {
@@ -472,6 +473,7 @@
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    opacity: 1;
   }
   
   .project-details {

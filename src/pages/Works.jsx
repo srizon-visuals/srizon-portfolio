@@ -253,19 +253,21 @@ const Works = () => {
             <div className="project-media">
               {selectedProject.video_url ? (
                 <>
-                  <div className="video-container">
-                    <iframe
-                      src={getYouTubeEmbedUrl(selectedProject.video_url)}
-                      title={selectedProject.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                  <div className="category-badge-container">
-                    <div className="category-badge">
-                      {selectedProject.category}
+                  <>
+                    <div className="video-container">
+                      <iframe
+                        src={getYouTubeEmbedUrl(selectedProject.video_url)}
+                        title={selectedProject.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
                     </div>
-                  </div>
+                    <div className="category-badge-container">
+                      <div className="category-badge">
+                        {selectedProject.category}
+                      </div>
+                    </div>
+                  </>
                 </>
               ) : selectedProject.thumbnail ? (
                 <img 
