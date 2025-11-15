@@ -169,21 +169,20 @@ const CreativePursuits = () => {
                         variants={itemVariants}
                         onClick={() => openModal(item)}
                       >
-                        <LazyLoad height={240} offset={100} once>
-                          {item.type === 'image' ? (
-                            <img src={item.src} alt={item.title || ""} />
-                          ) : (
-                            <div className="video-thumbnail">
-                              <img 
-                                src={item.thumbnail || getYouTubeThumbnailUrl(item.src)} 
-                                alt={item.title || ""}
-                              />
-                              <div className="play-button">
-                                <i className="fas fa-play"></i>
-                              </div>
+                        {item.type === 'image' ? (
+                          <img src={item.src} alt={item.title || ""} loading="lazy" />
+                        ) : (
+                          <div className="video-thumbnail">
+                            <img 
+                              src={item.thumbnail || getYouTubeThumbnailUrl(item.src)} 
+                              alt={item.title || ""}
+                              loading="lazy"
+                            />
+                            <div className="play-button">
+                              <i className="fas fa-play"></i>
                             </div>
-                          )}
-                        </LazyLoad>
+                          </div>
+                        )}
                       </motion.div>
                     ))}
                   </motion.div>
